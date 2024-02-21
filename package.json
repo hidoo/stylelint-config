@@ -62,7 +62,6 @@
     "eslint": "^8.56.0",
     "lint-staged": "^15.2.2",
     "mocha": "10.3.0",
-    "power-assert": "1.6.1",
     "prettier": "^3.2.5",
     "stylelint": "14.16.1"
   },
