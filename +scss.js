@@ -1,31 +1,27 @@
+const postcssScss = require('postcss-scss');
+
 module.exports = {
-  'customSyntax': require('postcss-scss'),
-  'extends': [
-    './src/base.js'
-  ],
-  'plugins': [
-    'stylelint-scss'
-  ],
-  'rules': {
+  customSyntax: postcssScss,
+  plugins: ['stylelint-scss'],
+  rules: {
     // stylelint
     'at-rule-no-unknown': null,
-    'at-rule-empty-line-before': ['always', {
-      except: [
-        'blockless-after-same-name-blockless',
-        'first-nested'
-      ],
-      ignore: [
-        'after-comment'
-      ],
-      ignoreAtRules: [
-        'else'
-      ]
-    }],
+    'at-rule-empty-line-before': [
+      'always',
+      {
+        except: ['blockless-after-same-name-blockless', 'first-nested'],
+        ignore: ['after-comment'],
+        ignoreAtRules: ['else'],
+      },
+    ],
     'no-invalid-position-at-import-rule': null,
-    'value-keyword-case': ['lower', {
-      // for sass variable
-      ignoreProperties: [/^\$.+/]
-    }],
+    'value-keyword-case': [
+      'lower',
+      {
+        // for sass variable
+        ignoreProperties: [/^\$.+/],
+      },
+    ],
 
     // stylelint-scss
     'scss/at-each-key-value-single-line': true,
@@ -33,15 +29,18 @@ module.exports = {
     'scss/at-else-if-parentheses-space-before': 'always',
     'scss/at-rule-conditional-no-parentheses': null,
     'scss/at-extend-no-missing-placeholder': true,
-    'scss/at-function-named-arguments': ['never', {
-      ignoreFunctions: [
-        'color.adjust',
-        'meta.function-exists',
-        'meta.get-function',
-        'meta.global-variable-exists',
-        'meta.mixin-exists'
-      ]
-    }],
+    'scss/at-function-named-arguments': [
+      'never',
+      {
+        ignoreFunctions: [
+          'color.adjust',
+          'meta.function-exists',
+          'meta.get-function',
+          'meta.global-variable-exists',
+          'meta.mixin-exists',
+        ],
+      },
+    ],
     'scss/at-if-no-null': true,
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-import-partial-extension': null,
@@ -51,32 +50,32 @@ module.exports = {
     'scss/at-rule-no-unknown': true,
     'scss/dollar-variable-colon-space-after': 'always-single-line',
     'scss/dollar-variable-colon-space-before': 'never',
-    'scss/dollar-variable-default': [true, {
-      ignore: 'local'
-    }],
-    'scss/dollar-variable-empty-line-before': ['always', {
-      except: [
-        'first-nested',
-        'after-dollar-variable'
-      ],
-      ignore: [
-        'after-comment'
-      ]
-    }],
-    'scss/double-slash-comment-empty-line-before': ['always', {
-      except: [
-        'first-nested'
-      ],
-      ignore: [
-        'between-comments',
-        'stylelint-commands'
-      ]
-    }],
-    'scss/double-slash-comment-inline': ['never', {
-      ignore: [
-        'stylelint-commands'
-      ]
-    }],
+    'scss/dollar-variable-default': [
+      true,
+      {
+        ignore: 'local',
+      },
+    ],
+    'scss/dollar-variable-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested', 'after-dollar-variable'],
+        ignore: ['after-comment'],
+      },
+    ],
+    'scss/double-slash-comment-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested'],
+        ignore: ['between-comments', 'stylelint-commands'],
+      },
+    ],
+    'scss/double-slash-comment-inline': [
+      'never',
+      {
+        ignore: ['stylelint-commands'],
+      },
+    ],
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,
@@ -88,6 +87,6 @@ module.exports = {
     'scss/operator-no-newline-before': true,
     'scss/operator-no-unspaced': true,
     'scss/selector-nest-combinators': 'always',
-    'scss/selector-no-redundant-nesting-selector': true
-  }
+    'scss/selector-no-redundant-nesting-selector': true,
+  },
 };

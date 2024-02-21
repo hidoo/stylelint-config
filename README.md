@@ -12,8 +12,8 @@ $ npm install --dev stylelint @hidoo/stylelint-config
 
 ```js
 {
-  extends: [
-    '@hidoo/stylelint-config'
+  "extends": [
+    "@hidoo/stylelint-config"
   ]
 }
 ```
@@ -22,8 +22,9 @@ $ npm install --dev stylelint @hidoo/stylelint-config
 
 ```js
 {
-  extends: [
-    '@hidoo/stylelint-config/scss'
+  "extends": [
+    "@hidoo/stylelint-config",
+    "@hidoo/stylelint-config/+scss"
   ]
 }
 ```
@@ -31,7 +32,7 @@ $ npm install --dev stylelint @hidoo/stylelint-config
 ## Test
 
 ```sh
-$ yarn test
+$ pnpm test
 ```
 
 ## License

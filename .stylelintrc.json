@@ -1,0 +1,4 @@
+{
+  "$scheme": "https://json.schemastore.org/stylelintrc.json",
+  "extends": ["./index.js", "./+scss.js"]
+}

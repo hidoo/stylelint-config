@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "root": true,
+  "extends": [
+    "@hidoo/eslint-config",
+    "@hidoo/eslint-config/+prettier",
+    "@hidoo/eslint-config/+node"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "extends": ["@hidoo/eslint-config/+mocha"]
+    }
+  ]
+}
