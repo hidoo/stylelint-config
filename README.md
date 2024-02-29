@@ -1,5 +1,7 @@
 # @hidoo/stylelint-config
 
+[![Test](https://github.com/hidoo/stylelint-config/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/hidoo/stylelint-config/actions/workflows/test.yml)
+
 > Sharable stylelint config for my projects.
 
 ## Installation
