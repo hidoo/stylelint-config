@@ -93,18 +93,9 @@
   width: #{$a}px;
 }
 
-// scss/dollar-variable-colon-newline-after
-.dollar-variable-colon-newline-after {
-  // prettier-ignore
-  $a: 0,
-    0;
-}
+// scss/dollar-variable-colon-newline-after -> disabled
 
-// scss/dollar-variable-colon-space-after
-.dollar-variable-colon-space-after {
-  // prettier-ignore
-  $a:0;
-}
+// scss/dollar-variable-colon-space-after -> disabled
 
 // scss/dollar-variable-default
 $dollar-variable-default: true;

@@ -1,4 +1,5 @@
 import plugin from 'stylelint-scss';
+import configPrettier from 'stylelint-config-prettier-scss';
 import configRecommended from 'stylelint-config-recommended-scss';
 import configStandard from 'stylelint-config-standard-scss';
 
@@ -140,6 +141,9 @@ export default {
     ],
     'scss/selector-nest-combinators': 'always',
     'scss/selector-no-redundant-nesting-selector': true,
-    'scss/selector-no-union-class-name': null
+    'scss/selector-no-union-class-name': null,
+
+    // Disabled stylistic rules to avoid conflict with prettier
+    ...configPrettier.rules
   }
 };
