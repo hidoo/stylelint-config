@@ -109,8 +109,6 @@ describe('scss', () => {
           'scss/at-use-no-unnamespaced',
           'scss/declaration-nested-properties',
           'scss/dimension-no-non-numeric-values',
-          'scss/dollar-variable-colon-newline-after',
-          'scss/dollar-variable-colon-space-after',
           'scss/dollar-variable-default',
           'scss/dollar-variable-empty-line-after',
           'scss/dollar-variable-first-in-block',
