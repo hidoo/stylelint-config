@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.no-unsupported-browser-features {
+  filter: blur(4px);
+}

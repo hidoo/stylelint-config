@@ -3,6 +3,9 @@ import { fileURLToPath } from 'node:url';
 
 export default {
   extends: [
-    path.resolve(fileURLToPath(new URL('src', import.meta.url)), 'base.js')
+    path.resolve(
+      fileURLToPath(new URL('src', import.meta.url)),
+      'compatibility.js'
+    )
   ]
 };

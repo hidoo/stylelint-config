@@ -5,12 +5,14 @@
 ## Installation
 
 ```sh
-$ npm install --dev stylelint @hidoo/stylelint-config
+npm install --save-dev stylelint @hidoo/stylelint-config
 ```
 
 ## Usage
 
-```js
+### Basic rules for CSS syntax
+
+```json
 {
   "extends": [
     "@hidoo/stylelint-config"
@@ -18,9 +20,42 @@ $ npm install --dev stylelint @hidoo/stylelint-config
 }
 ```
 
-### Usage in SCSS syntax
+### Basic rules with the order of properties
 
-```js
+```json
+{
+  "extends": [
+    "@hidoo/stylelint-config",
+    "@hidoo/stylelint-config/+order"
+  ]
+}
+```
+
+### Basic rules with the browser compatibility check
+
+```json
+{
+  "extends": [
+    "@hidoo/stylelint-config",
+    "@hidoo/stylelint-config/+compatibility"
+  ]
+}
+```
+
+### Basic rules with the performance check
+
+```json
+{
+  "extends": [
+    "@hidoo/stylelint-config",
+    "@hidoo/stylelint-config/+performance"
+  ]
+}
+```
+
+### Basic rules with SCSS syntax
+
+```json
 {
   "extends": [
     "@hidoo/stylelint-config",

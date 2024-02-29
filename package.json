@@ -2,20 +2,27 @@
   "name": "@hidoo/stylelint-config",
   "version": "0.9.0",
   "description": "Sharable stylelint config for my projects.",
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.3",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": "8.15.1"
+    "node": ">=18.12.0",
+    "pnpm": "8.15.3"
   },
+  "type": "module",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
+    "./+compatibility": "./+compatibility.js",
+    "./+order": "./+order.js",
+    "./+performance": "./+performance.js",
     "./+scss": "./+scss.js",
     "./src/*": "./src/*.js"
   },
   "files": [
     "src/",
     "index.js",
+    "+compatibility.js",
+    "+order.js",
+    "+performance.js",
     "+scss.js"
   ],
   "scripts": {
@@ -40,18 +47,17 @@
   "author": "hidoo",
   "license": "MIT",
   "dependencies": {
-    "postcss": "8.4.33",
-    "postcss-scss": "4.0.9",
-    "stylelint-a11y": "1.2.3",
-    "stylelint-config-standard": "24.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "2.7.0",
-    "stylelint-group-selectors": "1.0.9",
-    "stylelint-high-performance-animation": "1.8.0",
-    "stylelint-no-unsupported-browser-features": "5.0.4",
-    "stylelint-order": "5.0.0",
-    "stylelint-scss": "4.6.0",
+    "stylelint-config-recommended-scss": "14.0.0",
+    "stylelint-config-standard": "36.0.0",
+    "stylelint-config-standard-scss": "13.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.8.0",
+    "stylelint-group-selectors": "1.0.10",
+    "stylelint-high-performance-animation": "1.10.0",
+    "stylelint-no-unsupported-browser-features": "8.0.1",
+    "stylelint-order": "6.0.4",
+    "stylelint-scss": "6.1.0",
     "stylelint-selector-no-empty": "1.0.9",
-    "stylelint-selector-tag-no-without-class": "2.0.5"
+    "stylelint-selector-tag-no-without-class": "3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "18.6.1",
@@ -63,9 +69,10 @@
     "lint-staged": "15.2.2",
     "mocha": "10.3.0",
     "prettier": "3.2.5",
-    "stylelint": "14.16.1"
+    "stylelint": "16.2.1",
+    "stylelint-find-new-rules": "5.0.0"
   },
   "peerDependencies": {
-    "stylelint": ">=14.0.0"
+    "stylelint": ">=16.0.0"
   }
 }

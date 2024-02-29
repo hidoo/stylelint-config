@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.alpha-value-notation {
+  opacity: 0.5;
+}
+
+.color-function-notation {
+  color: rgb(255, 255, 255);
+}
+
+.color-hex-alpha {
+  color: #fff;
+}
+
+.declaration-no-important {
+  color: #000;
+}
+
+.function-url-no-scheme-relative {
+  background-image: url("https://example.com/images/bg1.png");
+}
+
+.function-url-scheme-allowed-list {
+  background-image: url("https://example.com/images/bg2.png");
+}
+
+.max-nesting-depth {
+  & .depth-1 {
+    & .depth-2 {
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+.media-feature-name-value-no-unknown {
+  @media (width: 320px) {
+    color: #000;
+  }
+}
+
+@keyframes no-unknown-animations {
+  from: {
+    opacity: 0;
+  }
+  to: {
+    opacity: 1;
+  }
+}
+
+.no-unknown-animations {
+  animation-name: no-unknown-animations;
+}
+
+.no-unknown-custom-properties {
+  --custom-prop: 0;
+
+  top: var(--custom-prop);
+}
+
+.property-no-unknown {
+  -webkit-overflow-scrolling: auto;
+}
+
+.selector__class--pattern {
+  /* no settings */
+}
+
+#selector__id--pattern {
+  /* no settings */
+}
+
+[selector] [max] [attribute] {
+  /* no settings */
+}
+
+.selector .max .class {
+  /* no settings */
+}
+
+#selector-max-id {
+  /* no settings */
+}
+
+.selector:first-child .max:last-child .pseudo-class:nth-child(n + 1) {
+  /* no settings */
+}
+
+#selector-max-specificity .selector .max .specificity {
+  /* no settings */
+}
+
+.selector-max-universal * {
+  /* no settings */
+}
+
+.plugin-declaration-block-no-ignored-properties {
+  display: block;
+  margin: 10px;
+}
+
+.plugin-stylelint-group-selectors,
+.plugin-stylelint-group-selectors2 {
+  color: #fff;
+  background-color: yellow;
+}
+
+.plugin-stylelint-selector-no-empty {
+  /* no settings */
+}
+
+div.plugin-selector-tag-no-without-class {
+  /* no settings */
+}

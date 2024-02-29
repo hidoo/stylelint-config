@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/lintstagedrc.schema.json",
   "**/*.js": ["eslint"],
-  "**/*.{js,json}": ["prettier --write"]
+  "**/*.{css,scss}": ["stylelint --allow-empty-input"],
+  "**/*.{css,scss,js,json}": ["prettier --write"]
 }

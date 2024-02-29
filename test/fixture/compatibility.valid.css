@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.no-unsupported-browser-features {
+  opacity: 0.5;
+}

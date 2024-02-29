@@ -1,4 +1,26 @@
 {
   "$scheme": "https://json.schemastore.org/stylelintrc.json",
-  "extends": ["./index.js", "./+scss.js"]
+  "overrides": [
+    {
+      "files": ["**/base.*.css"],
+      "extends": ["./index.js"]
+    },
+    {
+      "files": ["**/compatibility.*.css"],
+      "extends": ["./+compatibility.js"]
+    },
+    {
+      "files": ["**/order.*.css"],
+      "extends": ["./+order.js"]
+    },
+    {
+      "files": ["**/performance.*.css"],
+      "extends": ["./+performance.js"]
+    },
+    {
+      "files": ["**/*.scss"],
+      "extends": ["./+scss.js"]
+    }
+  ],
+  "ignoreFiles": ["test/fixture/*.{css,scss}"]
 }

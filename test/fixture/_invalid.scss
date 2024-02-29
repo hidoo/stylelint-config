@@ -1,0 +1,211 @@
+@use "sass:color";
+@use "sass:map";
+
+// scss/at-each-key-value-single-line
+.at-each-key-value-single-line {
+  $a: (
+    "a": "b",
+    "c": "d"
+  );
+
+  @each $key in map.keys($a) {
+    $value: map.get($a, $key);
+  }
+}
+
+// scss/at-function-named-arguments
+.at-function-named-arguments {
+  color: map.get(
+    (
+      "hoge": "fuga"
+    ),
+    $key: "hoge"
+  );
+}
+
+// scss/at-function-pattern
+.at-function-pattern {
+  @function -_a() {
+    @return 0;
+  }
+
+  width: -_a();
+}
+
+// scss/at-import-partial-extension-blacklist -> disabled
+
+// scss/at-import-partial-extension-whitelist
+// stylelint-disable-next-line no-invalid-position-at-import-rule, scss/partial-no-import
+@import "at-import-partial-extension-whitelist.hoge";
+
+// scss/at-mixin-argumentless-call-parentheses
+.at-mixin-argumentless-call-parentheses {
+  @include _a;
+}
+
+// scss/at-mixin-named-arguments
+.at-mixin-named-arguments {
+  @include _a("a", "b");
+}
+
+// scss/at-mixin-pattern
+.at-mixin-pattern {
+  @mixin -_a() {
+    // no settings
+  }
+
+  @include -_a();
+}
+
+// scss/at-root-no-redundant
+@at-root {
+  .at-root-no-redundant {
+    .a + & {
+      color: yellow;
+    }
+  }
+}
+
+// scss/at-use-no-redundant-alias
+@use "at-use-no-redundant-alias" as at-use-no-redundant-alias;
+
+// scss/at-use-no-unnamespaced
+@use "at-use-no-unnamespaced" as *;
+
+// scss/block-no-redundant-nesting -> disabled
+
+// scss/comment-no-loud -> disabled
+
+// scss/declaration-nested-properties
+.declaration-nested-properties {
+  background: url(a.png) {
+    size: auto;
+  }
+  background: {
+    repeat: no-repeat;
+  }
+}
+
+// scss/dimension-no-non-numeric-values
+.dimension-no-non-numeric-values {
+  $a: 0;
+
+  width: #{$a}px;
+}
+
+// scss/dollar-variable-colon-newline-after
+.dollar-variable-colon-newline-after {
+  // prettier-ignore
+  $a: 0,
+    0;
+}
+
+// scss/dollar-variable-colon-space-after
+.dollar-variable-colon-space-after {
+  // prettier-ignore
+  $a:0;
+}
+
+// scss/dollar-variable-default
+$dollar-variable-default: true;
+
+// scss/dollar-variable-empty-line-after
+.dollar-variable-empty-line-after {
+  $a: 0;
+  width: $a;
+}
+
+// scss/dollar-variable-first-in-block
+.dollar-variable-first-in-block {
+  width: $a;
+
+  $a: 0;
+}
+
+// scss/dollar-variable-no-namespaced-assignment
+.dollar-variable-no-namespaced-assignment {
+  ns.$a: 0;
+}
+
+// scss/dollar-variable-pattern
+.dollar-variable-pattern {
+  $-_a: 0;
+
+  width: $-_a;
+}
+
+// scss/double-slash-comment-inline
+.double-slash-comment-inline {
+  width: 0; // comment
+}
+
+// scss/function-calculation-no-interpolation -> disabled
+
+// scss/function-color-relative
+.function-color-relative {
+  // stylelint-disable-next-line scss/no-global-function-names
+  color: opacify(blue, 0.4);
+}
+
+// scss/function-disallowed-list -> disabled
+
+// scss/function-no-unknown -> disabled
+
+// scss/map-keys-quotes
+.map-keys-quotes {
+  $a: (
+    a: "b",
+    "c": "d"
+  );
+}
+
+// scss/media-feature-value-dollar-variable -> disabled
+
+// scss/no-dollar-variables -> disabled
+
+// scss/no-duplicate-dollar-variables
+.no-duplicate-dollar-variables {
+  $a: true;
+  $a: true;
+}
+
+// scss/no-unused-private-members
+.no-unused-private-members {
+  $_a: 0;
+}
+
+// scss/partial-no-import
+// stylelint-disable-next-line no-invalid-position-at-import-rule
+@import "a";
+
+// scss/percent-placeholder-pattern
+.percent-placeholder-pattern {
+  %-_a {
+    // no settings
+  }
+
+  @extend %-_a;
+}
+
+// scss/property-no-unknown
+.property-no-unknown {
+  -moz-overflow-scrolling: scroll;
+
+  @if true {
+    a: b;
+  }
+}
+
+// scss/selector-nest-combinators
+.selector-nest-combinators + .a {
+  // no settings
+}
+
+// scss/selector-no-redundant-nesting-selector
+.selector-no-redundant-nesting-selector {
+  & a {
+    // no settings
+  }
+}
+
+// scss/selector-no-union-class-name -> disabled, for support BEM syntax

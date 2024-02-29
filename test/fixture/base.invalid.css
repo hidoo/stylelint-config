@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+.alpha-value-notation {
+  opacity: 50%;
+}
+
+.color-function-notation {
+  color: rgb(255 255 255);
+}
+
+.color-hex-alpha {
+  color: #fffa;
+}
+
+.declaration-no-important {
+  color: #000 !important;
+}
+
+.function-url-no-scheme-relative {
+  background-image: url("//example.com/images/bg1.png");
+}
+
+.function-url-scheme-allowed-list {
+  background-image: url("file://images/bg2.png");
+}
+
+.max-nesting-depth {
+  & .depth-1 {
+    & .depth-2 {
+      &:first-child {
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.media-feature-name-value-no-unknown {
+  @media (width: 320) {
+    color: #000;
+  }
+}
+
+.no-unknown-animations {
+  animation-name: no-unknown-animations;
+}
+
+.no-unknown-custom-properties {
+  top: var(--custom-prop);
+}
+
+.property-no-unknown {
+  -moz-overflow-scrolling: auto;
+}
+
+.selector_-class-_pattern {
+  /* no settings */
+}
+
+#selector_-id-_pattern {
+  /* no settings */
+}
+
+[selector] [max] [attribute] [hoge] {
+  /* no settings */
+}
+
+.selector .max .class .hoge {
+  /* no settings */
+}
+
+#selector-max-id #hoge {
+  /* no settings */
+}
+
+.selector:first-child .max:last-child .pseudo-class:nth-child(n + 1) :hover {
+  /* no settings */
+}
+
+#selector-max-specificity .selector .max .specificity a {
+  /* no settings */
+}
+
+.selector-max-universal * * {
+  /* no settings */
+}
+
+.plugin-declaration-block-no-ignored-properties {
+  display: inline;
+  margin: 10px;
+}
+
+.plugin-stylelint-group-selectors {
+  color: #fff;
+  background-color: yellow;
+}
+
+.group-selectors-group-selectors2 {
+  color: #fff;
+  background-color: yellow;
+}
+
+.plugin-stylelint-selector-no-empty,
+,
+p {
+  /* no settings */
+}
+
+div .plugin-selector-tag-no-without-class {
+  /* no settings */
+}

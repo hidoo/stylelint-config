@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import findRules from './lib/findRules.js';
 import runLint from './lib/runLint.js';
 
-describe('scss', () => {
+describe('performance', () => {
   let dirname = null;
   let fixturesDir = null;
   let configFile = null;
@@ -13,13 +13,13 @@ describe('scss', () => {
   before(async () => {
     dirname = fileURLToPath(new URL('.', import.meta.url));
     fixturesDir = path.resolve(dirname, 'fixture');
-    configFile = path.resolve(dirname, '..', 'src', 'scss.js');
+    configFile = path.resolve(dirname, '..', 'src', 'performance.js');
     config = await import(configFile).then((module) => module.default);
   });
 
   it('should not use deprecated rules.', async () => {
     const deprecated = await findRules(configFile, 'deprecated', {
-      filterPrefix: /^scss\//
+      filterPrefix: /^\/plugin\//
     });
 
     assert.deepEqual(deprecated, [], 'No deprecated rules.');
@@ -27,7 +27,7 @@ describe('scss', () => {
 
   it('should not use invalid rules.', async () => {
     const invalid = await findRules(configFile, 'invalid', {
-      filterPrefix: /^scss\//
+      filterPrefix: /^\/plugin\//
     });
 
     assert.deepEqual(invalid, [], 'No invalid rules.');
@@ -35,16 +35,16 @@ describe('scss', () => {
 
   it('should not be unused rules.', async () => {
     const unused = await findRules(configFile, 'unused', {
-      filterPrefix: /^scss\//
+      filterPrefix: /^\/plugin\//
     });
 
     assert.deepEqual(unused, [], 'No unused rules.');
   });
 
-  it('should have no errors and no warnings in _valid.scss', async () => {
+  it('should have no errors and no warnings in performance.valid.css', async () => {
     const reports = await runLint(
       config,
-      path.resolve(fixturesDir, '_valid.scss')
+      path.resolve(fixturesDir, 'performance.valid.css')
     );
 
     reports.forEach((report) => {
@@ -70,10 +70,10 @@ describe('scss', () => {
     });
   });
 
-  it('should have errors and warnings in _invalid.scss', async () => {
+  it('should have errors and warnings in performance.invalid.css', async () => {
     const reports = await runLint(
       config,
-      path.resolve(fixturesDir, '_invalid.scss')
+      path.resolve(fixturesDir, 'performance.invalid.css')
     );
 
     reports.forEach((report) => {
@@ -96,43 +96,10 @@ describe('scss', () => {
 
       assert.deepEqual(
         errors,
-        [
-          'scss/at-each-key-value-single-line',
-          'scss/at-function-named-arguments',
-          'scss/at-function-pattern',
-          'scss/at-import-partial-extension-whitelist',
-          'scss/at-mixin-argumentless-call-parentheses',
-          'scss/at-mixin-named-arguments',
-          'scss/at-mixin-pattern',
-          'scss/at-root-no-redundant',
-          'scss/at-use-no-redundant-alias',
-          'scss/at-use-no-unnamespaced',
-          'scss/declaration-nested-properties',
-          'scss/dimension-no-non-numeric-values',
-          'scss/dollar-variable-colon-newline-after',
-          'scss/dollar-variable-colon-space-after',
-          'scss/dollar-variable-default',
-          'scss/dollar-variable-empty-line-after',
-          'scss/dollar-variable-first-in-block',
-          'scss/dollar-variable-no-namespaced-assignment',
-          'scss/dollar-variable-pattern',
-          'scss/double-slash-comment-inline',
-          'scss/function-color-relative',
-          'scss/map-keys-quotes',
-          'scss/no-unused-private-members',
-          'scss/partial-no-import',
-          'scss/percent-placeholder-pattern',
-          'scss/property-no-unknown',
-          'scss/selector-nest-combinators',
-          'scss/selector-no-redundant-nesting-selector'
-        ],
+        ['plugin/no-low-performance-animation-properties'],
         'Some errors.'
       );
-      assert.deepEqual(
-        warnings,
-        ['scss/no-duplicate-dollar-variables'],
-        'Some warnings.'
-      );
+      assert.deepEqual(warnings, [], 'No warnings.');
     });
   });
 });

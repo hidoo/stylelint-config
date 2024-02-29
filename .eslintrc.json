@@ -6,7 +6,17 @@
     "@hidoo/eslint-config/+prettier",
     "@hidoo/eslint-config/+node"
   ],
+  "rules": {
+    "import/no-anonymous-default-export": "off",
+    "node/file-extension-in-import": ["error", "always"]
+  },
   "overrides": [
+    {
+      "files": ["src/**/*.js"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
+    },
     {
       "files": ["**/*.test.js"],
       "extends": ["@hidoo/eslint-config/+mocha"]

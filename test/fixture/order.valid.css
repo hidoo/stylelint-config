@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.order-order {
+  $dollar-variables: 0;
+
+  --custom-properties: 0;
+
+  width: 0;
+
+  .rules {
+    width: 10px;
+  }
+}
+
+.order-properties-order {
+  content: "";
+  display: block;
+}

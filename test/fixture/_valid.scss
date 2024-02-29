@@ -1,0 +1,258 @@
+@use "sass:color";
+@use "sass:map";
+
+// scss/at-each-key-value-single-line
+.at-each-key-value-single-line {
+  $a: (
+    "a": "b",
+    "c": "d"
+  );
+
+  @each $key, $value in $a {
+    // no settings
+  }
+}
+
+// scss/at-function-named-arguments
+.at-function-named-arguments {
+  color: map.get(
+    (
+      "hoge": "fuga"
+    ),
+    "hoge"
+  );
+}
+
+// scss/at-function-pattern
+.at-function-pattern {
+  // stylelint-disable-next-line scss/no-unused-private-members
+  @function _a() {
+    @return 0;
+  }
+
+  width: -_a();
+}
+
+// scss/at-import-partial-extension-blacklist -> disabled
+
+// scss/at-import-partial-extension-whitelist
+// stylelint-disable-next-line no-invalid-position-at-import-rule, scss/partial-no-import
+@import "at-import-partial-extension-whitelist.less";
+
+// scss/at-mixin-argumentless-call-parentheses
+.at-mixin-argumentless-call-parentheses {
+  @include _a();
+}
+
+// scss/at-mixin-named-arguments
+.at-mixin-named-arguments {
+  @include _a($first: "a", $second: "b");
+
+  // allow single argument
+  @include _a("a");
+}
+
+// scss/at-mixin-pattern
+.at-mixin-pattern {
+  @mixin _a() {
+    // no settings
+  }
+
+  @include _a();
+}
+
+// scss/at-root-no-redundant
+.at-root-no-redundant {
+  @at-root {
+    .a + & {
+      color: yellow;
+    }
+  }
+}
+
+// scss/at-use-no-redundant-alias
+@use "at-use-no-redundant-alias" as no-redundant-alias;
+
+// scss/at-use-no-unnamespaced
+@use "at-use-no-unnamespaced" as no-unnamespaced;
+
+// scss/block-no-redundant-nesting -> disabled
+.block-no-redundant-nesting {
+  &-a {
+    // no settings
+  }
+}
+
+// scss/comment-no-loud -> disabled
+/* comment-no-loud */
+
+// scss/declaration-nested-properties
+.declaration-nested-properties {
+  background: url(a.png) {
+    size: auto;
+  }
+  background-repeat: no-repeat;
+}
+
+// scss/dimension-no-non-numeric-values
+.dimension-no-non-numeric-values {
+  $a: 0;
+
+  width: $a * 1px;
+}
+
+// scss/dollar-variable-colon-newline-after
+.dollar-variable-colon-newline-after {
+  // prettier-ignore
+  $a:
+    0,
+    0;
+}
+
+// scss/dollar-variable-colon-space-after
+.dollar-variable-colon-space-after {
+  $a: 0;
+}
+
+// scss/dollar-variable-default
+$dollar-variable-default: true !default;
+
+// scss/dollar-variable-empty-line-after
+.dollar-variable-empty-line-after {
+  $a: 0;
+
+  width: $a;
+}
+
+// scss/dollar-variable-first-in-block
+.dollar-variable-first-in-block {
+  $a: 0;
+
+  width: $a;
+}
+
+// scss/dollar-variable-no-namespaced-assignment
+.dollar-variable-no-namespaced-assignment {
+  $a: 0;
+}
+
+// scss/dollar-variable-pattern
+.dollar-variable-pattern {
+  $_a: 0;
+
+  width: $_a;
+}
+
+// scss/double-slash-comment-inline
+.double-slash-comment-inline {
+  width: 0; // stylelint-disable-line
+}
+
+// scss/function-calculation-no-interpolation -> disabled
+.function-calculation-no-interpolation {
+  $a: 0;
+
+  width: calc(#{$a} + 20px);
+}
+
+// scss/function-color-relative
+.function-color-relative {
+  // stylelint-disable-next-line scss/no-global-function-names
+  color: scale-color(blue, -40%);
+}
+
+// scss/function-disallowed-list -> disabled
+
+// scss/function-no-unknown -> disabled, for user defined function
+.function-no-unknown {
+  @function _a() {
+    @return blue;
+  }
+
+  background-color: _a();
+}
+
+// scss/map-keys-quotes
+.map-keys-quotes {
+  $a: (
+    "a": "b",
+    "c": "d"
+  );
+}
+
+// scss/media-feature-value-dollar-variable -> disabled
+.media-feature-value-dollar-variable {
+  $a: 300px;
+
+  @media (max-width: 300px) {
+    // no settings
+  }
+
+  @media (max-width: $a) {
+    // no settings
+  }
+}
+
+// scss/no-dollar-variables -> disabled
+.no-dollar-variables {
+  $a: true;
+}
+
+// scss/no-duplicate-dollar-variables
+.no-duplicate-dollar-variables {
+  $a: true;
+
+  @if $a {
+    $a: true;
+  }
+}
+
+// scss/no-unused-private-members
+.no-unused-private-members {
+  $_a: 0;
+
+  width: $_a;
+}
+
+// scss/partial-no-import
+// stylelint-disable-next-line no-invalid-position-at-import-rule
+@import "a.css";
+
+// scss/percent-placeholder-pattern
+.percent-placeholder-pattern {
+  %_a {
+    // no settings
+  }
+
+  @extend %_a;
+}
+
+// scss/property-no-unknown
+.property-no-unknown {
+  -webkit-overflow-scrolling: scroll;
+
+  @supports (a: b) {
+    a: b;
+  }
+}
+
+// scss/selector-nest-combinators
+.selector-nest-combinators {
+  + .a {
+    // no settings
+  }
+}
+
+// scss/selector-no-redundant-nesting-selector
+.selector-no-redundant-nesting-selector {
+  a & {
+    /* no settings */
+  }
+}
+
+// scss/selector-no-union-class-name -> disabled, for support BEM syntax
+.selector-no-union-class-name {
+  &__a {
+    // no settings
+  }
+}
