@@ -94,12 +94,8 @@ describe('order', () => {
         )
       ];
 
-      assert.deepEqual(
-        errors,
-        ['order/order', 'order/properties-order'],
-        'Some errors.'
-      );
-      assert.deepEqual(warnings, [], 'No warnings.');
+      assert.deepEqual(errors, ['order/properties-order'], 'Some errors.');
+      assert.deepEqual(warnings, ['order/order'], 'Some warnings.');
     });
   });
 });

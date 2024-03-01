@@ -12,10 +12,8 @@ export default {
   plugins: ['stylelint-order'],
   rules: {
     'order/order': [
-      'dollar-variables',
-      'custom-properties',
-      'declarations',
-      'rules'
+      ['dollar-variables', 'custom-properties', 'declarations', 'rules'],
+      { severity: 'warning' }
     ],
     'order/properties-alphabetical-order': null,
     'order/properties-order': [

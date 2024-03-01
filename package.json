@@ -58,7 +58,8 @@
     "stylelint-order": "6.0.4",
     "stylelint-scss": "6.1.0",
     "stylelint-selector-no-empty": "1.0.9",
-    "stylelint-selector-tag-no-without-class": "3.0.0"
+    "stylelint-selector-tag-no-without-class": "3.0.0",
+    "stylelint-value-no-unknown-custom-properties": "6.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "18.6.1",

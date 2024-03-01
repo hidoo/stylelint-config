@@ -1,9 +1,18 @@
 /**
- * selector pattern
+ * Return rule value for selector pattern
  *
- * @type {String}
+ * @param {String} type identifier type
+ * @param {Object} options options
+ * @return {Array}
  */
-const selectorPattern = '^([a-z][a-z0-9]*)((-|__|--)[a-z0-9]+)*$';
+const selectorPattern = (type, options) => [
+  '^([a-z][a-z0-9]*)((-|__|--)[a-z0-9]+)*$',
+  {
+    message: (selector) =>
+      `Expected ${type} selector "${selector}" to be kebab-case (Allow BEM style)`,
+    ...options
+  }
+];
 
 export default {
   extends: ['stylelint-config-standard'],
@@ -11,7 +20,8 @@ export default {
     'stylelint-declaration-block-no-ignored-properties',
     'stylelint-group-selectors',
     'stylelint-selector-no-empty',
-    'stylelint-selector-tag-no-without-class'
+    'stylelint-selector-tag-no-without-class',
+    'stylelint-value-no-unknown-custom-properties'
   ],
   rules: {
     'alpha-value-notation': 'number',
@@ -39,7 +49,7 @@ export default {
     'function-url-scheme-allowed-list': ['data', '/^http/'],
     'function-url-scheme-disallowed-list': null,
     'hue-degree-notation': null,
-    'max-nesting-depth': [3, { ignore: ['blockless-at-rules'] }],
+    'max-nesting-depth': [4, { ignore: ['blockless-at-rules'] }],
     'media-feature-name-allowed-list': null,
     'media-feature-name-disallowed-list': null,
     'media-feature-name-unit-allowed-list': null,
@@ -47,7 +57,7 @@ export default {
     'media-feature-name-value-no-unknown': true,
     'media-feature-range-notation': null,
     'no-unknown-animations': true,
-    'no-unknown-custom-properties': true,
+    'no-unknown-custom-properties': null,
     'keyframe-block-no-duplicate-selectors': true,
     'property-allowed-list': null,
     'property-disallowed-list': null,
@@ -61,24 +71,13 @@ export default {
     'selector-attribute-name-disallowed-list': null,
     'selector-attribute-operator-allowed-list': null,
     'selector-attribute-operator-disallowed-list': null,
-    'selector-class-pattern': [
-      selectorPattern,
-      {
-        message: (selector) =>
-          `Expected class selector "${selector}" to be kebab-case (includes BEM)`,
-        resolveNestedSelectors: true
-      }
-    ],
+    'selector-class-pattern': selectorPattern('class', {
+      resolveNestedSelectors: true
+    }),
     'selector-combinator-allowed-list': null,
     'selector-combinator-disallowed-list': null,
     'selector-disallowed-list': null,
-    'selector-id-pattern': [
-      selectorPattern,
-      {
-        message: (selector) =>
-          `Expected id selector "${selector}" to be kebab-case (includes BEM)`
-      }
-    ],
+    'selector-id-pattern': selectorPattern('id'),
     'selector-max-attribute': [3, { severity: 'warning' }],
     'selector-max-class': [3, { severity: 'warning' }],
     'selector-max-combinators': null,
@@ -86,12 +85,12 @@ export default {
     'selector-max-id': [1, { severity: 'warning' }],
     'selector-max-pseudo-class': [3, { severity: 'warning' }],
     'selector-max-specificity': [
-      '1,3,0',
+      '1,3,3',
       {
         severity: 'warning'
       }
     ],
-    'selector-max-type': null,
+    'selector-max-type': [3, { severity: 'warning' }],
     'selector-max-universal': [1, { severity: 'warning' }],
     'selector-nested-pattern': null,
     'selector-no-qualifying-type': null,
@@ -102,6 +101,17 @@ export default {
     'time-min-milliseconds': null,
     'unit-allowed-list': null,
     'unit-disallowed-list': null,
+    'value-keyword-case': [
+      'lower',
+      {
+        ignoreKeywords: ['BlinkMacSystemFont', 'Helvetica', 'Arial', 'Meiryo'],
+        camelCaseSvgKeywords: true
+      }
+    ],
+
+    // csstools/value-no-unknown-custom-properties
+    // use instead of no-unknown-custom-properties rule
+    'csstools/value-no-unknown-custom-properties': true,
 
     // plugin/stylelint-declaration-block-no-ignored-properties
     'plugin/declaration-block-no-ignored-properties': true,

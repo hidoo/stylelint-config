@@ -111,7 +111,6 @@ describe('scss', () => {
           'scss/dimension-no-non-numeric-values',
           'scss/dollar-variable-default',
           'scss/dollar-variable-empty-line-after',
-          'scss/dollar-variable-first-in-block',
           'scss/dollar-variable-no-namespaced-assignment',
           'scss/dollar-variable-pattern',
           'scss/double-slash-comment-inline',
@@ -128,7 +127,11 @@ describe('scss', () => {
       );
       assert.deepEqual(
         warnings,
-        ['scss/no-duplicate-dollar-variables'],
+        [
+          'at-rule-disallowed-list',
+          'scss/dollar-variable-first-in-block',
+          'scss/no-duplicate-dollar-variables'
+        ],
         'Some warnings.'
       );
     });
