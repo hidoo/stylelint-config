@@ -28,8 +28,10 @@
   & .depth-1 {
     & .depth-2 {
       &:first-child {
-        &:hover {
-          color: #000;
+        &:last-child {
+          &:hover {
+            color: #000;
+          }
         }
       }
     }
@@ -78,12 +80,20 @@
   /* no settings */
 }
 
-#selector-max-specificity .selector .max .specificity a {
+#selector-max-specificity .selector .max .specificity .error p a b {
+  /* no settings */
+}
+
+.selector-max-type p a i u {
   /* no settings */
 }
 
 .selector-max-universal * * {
   /* no settings */
+}
+
+.value-keyword-case {
+  color: currentcolor;
 }
 
 .plugin-declaration-block-no-ignored-properties {

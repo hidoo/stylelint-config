@@ -1,6 +1,9 @@
 @use "sass:color";
 @use "sass:map";
 
+// at-rule-disallowed-list
+@debug "hoge";
+
 // scss/at-each-key-value-single-line
 .at-each-key-value-single-line {
   $a: (

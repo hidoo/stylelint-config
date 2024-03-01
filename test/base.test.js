@@ -99,10 +99,11 @@ describe('base', () => {
           'max-nesting-depth',
           'media-feature-name-value-no-unknown',
           'no-unknown-animations',
-          'no-unknown-custom-properties',
           'property-no-unknown',
           'selector-class-pattern',
           'selector-id-pattern',
+          'value-keyword-case',
+          'csstools/value-no-unknown-custom-properties',
           'plugin/declaration-block-no-ignored-properties',
           'plugin/stylelint-group-selectors',
           'plugin/stylelint-selector-no-empty',
@@ -119,6 +120,7 @@ describe('base', () => {
           'selector-max-id',
           'selector-max-pseudo-class',
           'selector-max-specificity',
+          'selector-max-type',
           'selector-max-universal'
         ].sort(),
         'Some warnings.'

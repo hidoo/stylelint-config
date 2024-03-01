@@ -1,26 +1,38 @@
-import plugin from 'stylelint-scss';
 import configPrettier from 'stylelint-config-prettier-scss';
 import configRecommended from 'stylelint-config-recommended-scss';
 import configStandard from 'stylelint-config-standard-scss';
 
 /**
- * identifier pattern
+ * Return rule value for identifier pattern
  *
- * @type {String}
+ * @param {String} type identifier type
+ * @param {Object} options options
+ * @return {Array}
  */
-const identifierPattern = '^([-_]?[a-z][a-z0-9]*)(-[a-z0-9]+)*$';
+const identifierPattern = (type, options) => [
+  '^([-_]?[a-z][a-z0-9]*)(--?[a-z0-9]+)*$',
+  {
+    message: `Expected ${type} to be kebab-case (Allow private members start with underscore)`,
+    ...options
+  }
+];
 
 export default {
   customSyntax: configRecommended.customSyntax,
-  plugins: [plugin],
+  plugins: ['stylelint-selector-no-empty', 'stylelint-scss'],
   rules: {
     ...configRecommended.rules,
     ...configStandard.rules,
 
     // overrides stylelint rules
+    'at-rule-disallowed-list': [['debug'], { severity: 'warning' }],
     'media-feature-name-value-no-unknown': null,
     'no-invalid-double-slash-comments': null,
     'property-no-unknown': null,
+
+    // Disabled following rule,
+    // because not support interpolation in selectors
+    'plugin/stylelint-selector-no-empty': null,
 
     // stylelint-scss rules
     'scss/at-each-key-value-single-line': true,
@@ -42,13 +54,7 @@ export default {
         ]
       }
     ],
-    'scss/at-function-pattern': [
-      identifierPattern,
-      {
-        message:
-          'Expected function name to be kebab-case (Allow private members start with underscore)'
-      }
-    ],
+    'scss/at-function-pattern': identifierPattern('function name'),
     'scss/at-import-partial-extension-blacklist': null,
     'scss/at-import-partial-extension-whitelist': ['less', 'sass', 'styl'],
     'scss/at-mixin-argumentless-call-parentheses': 'always',
@@ -58,13 +64,7 @@ export default {
         ignore: ['single-argument']
       }
     ],
-    'scss/at-mixin-pattern': [
-      identifierPattern,
-      {
-        message:
-          'Expected mixin name to be kebab-case (Allow private members start with underscore)'
-      }
-    ],
+    'scss/at-mixin-pattern': identifierPattern('mixin name'),
     'scss/at-root-no-redundant': true,
     'scss/at-use-no-redundant-alias': true,
     'scss/at-use-no-unnamespaced': true,
@@ -84,24 +84,19 @@ export default {
       'always',
       {
         except: ['before-dollar-variable', 'last-nested'],
-        ignore: ['inside-single-line-block']
+        ignore: ['before-comment', 'inside-single-line-block']
       }
     ],
     'scss/dollar-variable-first-in-block': [
       true,
       {
         except: ['root', 'at-rule', 'function', 'mixin', 'if-else', 'loops'],
-        ignore: ['comments', 'imports']
+        ignore: ['comments', 'imports'],
+        severity: 'warning'
       }
     ],
     'scss/dollar-variable-no-namespaced-assignment': true,
-    'scss/dollar-variable-pattern': [
-      identifierPattern,
-      {
-        message:
-          'Expected variable to be kebab-case (Allow private members start with underscore)'
-      }
-    ],
+    'scss/dollar-variable-pattern': identifierPattern('variable'),
     'scss/double-slash-comment-inline': [
       'never',
       {
@@ -125,13 +120,7 @@ export default {
     ],
     'scss/no-unused-private-members': true,
     'scss/partial-no-import': true,
-    'scss/percent-placeholder-pattern': [
-      identifierPattern,
-      {
-        message:
-          'Expected placeholder to be kebab-case (Allow private members start with underscore)'
-      }
-    ],
+    'scss/percent-placeholder-pattern': identifierPattern('placeholder'),
     'scss/property-no-unknown': [
       true,
       {

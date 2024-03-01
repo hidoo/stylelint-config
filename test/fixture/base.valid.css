@@ -27,8 +27,10 @@
 .max-nesting-depth {
   & .depth-1 {
     & .depth-2 {
-      &:hover {
-        color: #000;
+      &:first-child {
+        &:hover {
+          color: #000;
+        }
       }
     }
   }
@@ -87,12 +89,21 @@
   /* no settings */
 }
 
-#selector-max-specificity .selector .max .specificity {
+#selector-max-specificity .selector .max .specificity p a b {
+  /* no settings */
+}
+
+.selector-max-type p a i {
   /* no settings */
 }
 
 .selector-max-universal * {
   /* no settings */
+}
+
+.value-keyword-case {
+  color: currentColor;
+  font-family: BlinkMacSystemFont, Helvetica, Arial, Meiryo, sans-serif;
 }
 
 .plugin-declaration-block-no-ignored-properties {
