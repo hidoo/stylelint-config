@@ -44,7 +44,8 @@ describe('compatibility', () => {
   it('should have no errors and no warnings in compatibility.valid.css', async () => {
     const reports = await runLint(
       config,
-      path.resolve(fixturesDir, 'compatibility.valid.css')
+      path.resolve(fixturesDir, 'compatibility.valid.css'),
+      { cwd: dirname }
     );
 
     reports.forEach((report) => {
