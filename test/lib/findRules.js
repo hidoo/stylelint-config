@@ -1,6 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
 import stylelintRules from 'stylelint-find-new-rules';
-import stylelint from 'stylelint';
 
 /**
  * default options
@@ -10,37 +9,6 @@ import stylelint from 'stylelint';
 const defaultOptions = {
   filterPrefix: ''
 };
-
-/**
- * get all rules from config file
- *
- * @param {import('stylelint').Config} config config object
- * @return {Array<Object>} list of rule
- */
-function getAllRules(config = {}) {
-  const rules = Object.entries(stylelint.rules).map(([name, rule]) => {
-    return {
-      name,
-      deprecated: Boolean(rule.meta?.deprecated)
-    };
-  });
-
-  if (config.plugins) {
-    config.plugins.forEach((pluginRules) => {
-      rules.push(
-        ...pluginRules.map(({ ruleName, rule }) => {
-          // console.log(rule);
-          return {
-            name: ruleName,
-            deprecated: Boolean(rule.meta?.deprecated)
-          };
-        })
-      );
-    });
-  }
-
-  return rules;
-}
 
 /**
  * find rules by type
