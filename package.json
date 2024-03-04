@@ -32,6 +32,7 @@
     "test": "pnpm run --sequential '/^test:[^:]+$/'",
     "test:lint": "pnpm run --sequential '/^test:lint:[^:]+$/'",
     "test:lint:js": "eslint .",
+    "test:lint:style": "stylelint **/*.{css,scss} --fix",
     "test:unit": "cross-env NODE_ENV=test mocha test/**/*.test.js",
     "version": "pnpm run --sequential '/^(test|version:[^:]+)$/'",
     "version:changelog": "conventional-changelog -p angular -i ./CHANGELOG.md -s -r 0",
@@ -47,6 +48,7 @@
   "author": "hidoo",
   "license": "MIT",
   "dependencies": {
+    "stylelint-config-clean-order": "5.4.1",
     "stylelint-config-prettier-scss": "1.0.0",
     "stylelint-config-recommended-scss": "14.0.0",
     "stylelint-config-standard": "36.0.0",
@@ -55,7 +57,6 @@
     "stylelint-group-selectors": "1.0.10",
     "stylelint-high-performance-animation": "1.10.0",
     "stylelint-no-unsupported-browser-features": "8.0.1",
-    "stylelint-order": "6.0.4",
     "stylelint-scss": "6.1.0",
     "stylelint-selector-no-empty": "1.0.9",
     "stylelint-selector-tag-no-without-class": "3.0.0",

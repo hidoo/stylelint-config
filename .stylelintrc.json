@@ -22,5 +22,5 @@
       "extends": ["./+scss.js"]
     }
   ],
-  "ignoreFiles": ["test/fixture/*.{css,scss}"]
+  "ignoreFiles": ["test/fixture/*.invalid.css", "test/fixture/_invalid.scss"]
 }
