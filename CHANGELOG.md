@@ -1,3 +1,12 @@
+# [1.0.0-alpha.1](https://github.com/hidoo/stylelint-config/compare/v1.0.0-alpha.0...v1.0.0-alpha.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* **order:** change to use stylelint-config-clean-order based order ([7732847](https://github.com/hidoo/stylelint-config/commit/773284729622ec3c02a2259336ee8196896521ed))
+
+
+
 # [1.0.0-alpha.0](https://github.com/hidoo/stylelint-config/compare/v0.9.0...v1.0.0-alpha.0) (2024-03-01)
 
 
