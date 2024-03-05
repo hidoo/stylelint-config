@@ -1,27 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "schedule:earlyMondays",
-    ":automergeMinor",
-    ":automergePr",
-    ":maintainLockFilesMonthly",
-    ":label(renovate)",
-    ":pinAllExceptPeerDependencies",
-    ":prHourlyLimitNone",
-    ":timezone(Asia/Tokyo)"
-  ],
-  "packageRules": [
-    {
-      "extends": ["monorepo:commitlint"],
-      "groupName": "commitlint monorepo",
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"],
-      "automerge": false
-    },
-    {
-      "groupName": "devtool packages",
-      "matchPackageNames": ["lint-staged"],
-      "automerge": false
-    }
-  ]
+  "extends": ["github>hidoo/renovate-config"]
 }
