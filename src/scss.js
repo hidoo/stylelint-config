@@ -55,8 +55,8 @@ export default {
       }
     ],
     'scss/at-function-pattern': identifierPattern('function name'),
-    'scss/at-import-partial-extension-blacklist': null,
-    'scss/at-import-partial-extension-whitelist': ['less', 'sass', 'styl'],
+    'scss/at-import-partial-extension-disallowed-list': null,
+    'scss/at-import-partial-extension-allowed-list': ['less', 'sass', 'styl'],
     'scss/at-mixin-argumentless-call-parentheses': 'always',
     'scss/at-mixin-named-arguments': [
       'always',

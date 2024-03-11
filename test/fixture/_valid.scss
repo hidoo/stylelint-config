@@ -33,11 +33,11 @@
   width: -_a();
 }
 
-// scss/at-import-partial-extension-blacklist -> disabled
+// scss/at-import-partial-extension-disallowed-list -> disabled
 
-// scss/at-import-partial-extension-whitelist
+// scss/at-import-partial-extension-allowed-list
 // stylelint-disable-next-line no-invalid-position-at-import-rule, scss/partial-no-import
-@import "at-import-partial-extension-whitelist.less";
+@import "at-import-partial-extension-allowed-list.less";
 
 // scss/at-mixin-argumentless-call-parentheses
 .at-mixin-argumentless-call-parentheses {
