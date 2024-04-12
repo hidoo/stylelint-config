@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/hidoo/stylelint-config/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/hidoo/stylelint-config/actions/workflows/test.yml)
 
-> Sharable stylelint config for my projects.
+> Shareable stylelint config for my projects.
 
 ## Installation
 
@@ -16,9 +16,7 @@ npm install --save-dev stylelint @hidoo/stylelint-config
 
 ```json
 {
-  "extends": [
-    "@hidoo/stylelint-config"
-  ]
+  "extends": ["@hidoo/stylelint-config"]
 }
 ```
 
@@ -26,10 +24,7 @@ npm install --save-dev stylelint @hidoo/stylelint-config
 
 ```json
 {
-  "extends": [
-    "@hidoo/stylelint-config",
-    "@hidoo/stylelint-config/+order"
-  ]
+  "extends": ["@hidoo/stylelint-config", "@hidoo/stylelint-config/+order"]
 }
 ```
 
@@ -48,10 +43,7 @@ npm install --save-dev stylelint @hidoo/stylelint-config
 
 ```json
 {
-  "extends": [
-    "@hidoo/stylelint-config",
-    "@hidoo/stylelint-config/+performance"
-  ]
+  "extends": ["@hidoo/stylelint-config", "@hidoo/stylelint-config/+performance"]
 }
 ```
 
@@ -59,10 +51,7 @@ npm install --save-dev stylelint @hidoo/stylelint-config
 
 ```json
 {
-  "extends": [
-    "@hidoo/stylelint-config",
-    "@hidoo/stylelint-config/+scss"
-  ]
+  "extends": ["@hidoo/stylelint-config", "@hidoo/stylelint-config/+scss"]
 }
 ```
 
