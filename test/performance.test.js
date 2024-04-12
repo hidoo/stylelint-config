@@ -94,12 +94,12 @@ describe('performance', () => {
         )
       ];
 
+      assert.deepEqual(errors, [], 'No errors.');
       assert.deepEqual(
-        errors,
+        warnings,
         ['plugin/no-low-performance-animation-properties'],
-        'Some errors.'
+        'Some warnings.'
       );
-      assert.deepEqual(warnings, [], 'No warnings.');
     });
   });
 });

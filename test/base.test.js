@@ -103,7 +103,6 @@ describe('base', () => {
           'selector-class-pattern',
           'selector-id-pattern',
           'value-keyword-case',
-          'csstools/value-no-unknown-custom-properties',
           'plugin/declaration-block-no-ignored-properties',
           'plugin/stylelint-group-selectors',
           'plugin/stylelint-selector-no-empty',
@@ -121,7 +120,8 @@ describe('base', () => {
           'selector-max-pseudo-class',
           'selector-max-specificity',
           'selector-max-type',
-          'selector-max-universal'
+          'selector-max-universal',
+          'csstools/value-no-unknown-custom-properties'
         ].sort(),
         'Some warnings.'
       );

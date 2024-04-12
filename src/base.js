@@ -111,7 +111,12 @@ export default {
 
     // csstools/value-no-unknown-custom-properties
     // use instead of no-unknown-custom-properties rule
-    'csstools/value-no-unknown-custom-properties': true,
+    'csstools/value-no-unknown-custom-properties': [
+      true,
+      {
+        severity: 'warning'
+      }
+    ],
 
     // plugin/stylelint-declaration-block-no-ignored-properties
     'plugin/declaration-block-no-ignored-properties': true,

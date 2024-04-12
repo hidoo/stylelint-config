@@ -4,7 +4,8 @@ export default {
     'plugin/no-low-performance-animation-properties': [
       true,
       {
-        ignore: 'paint-properties'
+        ignore: 'paint-properties',
+        severity: 'warning'
       }
     ]
   }
