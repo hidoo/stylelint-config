@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/hidoo/stylelint-config/compare/v1.0.0-alpha.1...v1.0.0) (2024-04-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency stylelint-config-clean-order to v5.4.2 ([518a596](https://github.com/hidoo/stylelint-config/commit/518a596b396f6e442592241be36ee8653c237aff))
+* **deps:** update dependency stylelint-config-standard-scss to v13.1.0 ([e0abf0f](https://github.com/hidoo/stylelint-config/commit/e0abf0f0ba0101d1f58eb119d52a769382c6def1))
+* **deps:** update dependency stylelint-scss to v6.2.1 ([09834e7](https://github.com/hidoo/stylelint-config/commit/09834e7f73c4314fe0f282d3e365add135ce48b1))
+* **deps:** update dependency stylelint-selector-tag-no-without-class to v3.0.1 ([50b42ff](https://github.com/hidoo/stylelint-config/commit/50b42ff11375ace1d2cf3232c9c8af4da2a3f0ac))
+* **scss:** replace deprecated rules and fix fixture for no-unused-private-members rule ([1ae1a0c](https://github.com/hidoo/stylelint-config/commit/1ae1a0c55d943976ac31b3f4e440f7d26c64c9df))
+* severity tweaks ([446bc44](https://github.com/hidoo/stylelint-config/commit/446bc447de778abc0b688bcfccfef1e678bf553d))
+
+
+
 # [1.0.0-alpha.1](https://github.com/hidoo/stylelint-config/compare/v1.0.0-alpha.0...v1.0.0-alpha.1) (2024-03-04)
 
 
