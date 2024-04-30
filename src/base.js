@@ -57,6 +57,7 @@ export default {
     'media-feature-name-value-no-unknown': true,
     'media-feature-range-notation': null,
     'no-unknown-animations': true,
+    'no-unknown-custom-media': true,
     'no-unknown-custom-properties': null,
     'keyframe-block-no-duplicate-selectors': true,
     'property-allowed-list': null,
