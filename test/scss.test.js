@@ -128,6 +128,7 @@ describe('scss', () => {
         warnings,
         [
           'at-rule-disallowed-list',
+          'scss/at-mixin-no-risky-nesting-selector',
           'scss/dollar-variable-first-in-block',
           'scss/no-duplicate-dollar-variables'
         ],

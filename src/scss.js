@@ -64,6 +64,12 @@ export default {
         ignore: ['single-argument']
       }
     ],
+    'scss/at-mixin-no-risky-nesting-selector': [
+      true,
+      {
+        severity: 'warning'
+      }
+    ],
     'scss/at-mixin-pattern': identifierPattern('mixin name'),
     'scss/at-root-no-redundant': true,
     'scss/at-use-no-redundant-alias': true,
