@@ -257,3 +257,14 @@ $dollar-variable-default: true !default;
     // no settings
   }
 }
+
+// scss/at-mixin-no-risky-nesting-selector
+@mixin at-mixin-no-risky-nesting-selector {
+  .bar {
+    color: blue;
+
+    .baz {
+      color: red;
+    }
+  }
+}

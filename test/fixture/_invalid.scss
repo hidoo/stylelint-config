@@ -204,3 +204,14 @@ $dollar-variable-default: true;
 }
 
 // scss/selector-no-union-class-name -> disabled, for support BEM syntax
+
+// scss/at-mixin-no-risky-nesting-selector
+@mixin at-mixin-no-risky-nesting-selector {
+  .bar {
+    color: blue;
+
+    .baz & {
+      color: red;
+    }
+  }
+}
