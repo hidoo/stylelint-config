@@ -1,4 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>hidoo/renovate-config"]
+  "extends": ["github>hidoo/renovate-config"],
+  "npm": {
+    "packageRules": [
+      {
+        "groupName": "stylelint-scss packages",
+        "matchPackageNames": [
+          "stylelint-scss",
+          "stylelint-config-recommended-scss"
+        ]
+      }
+    ]
+  }
 }
