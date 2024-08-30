@@ -77,6 +77,7 @@ export default {
     'scss/block-no-redundant-nesting': null,
     'scss/comment-no-loud': null,
     'scss/declaration-nested-properties': 'never',
+    'scss/declaration-property-value-no-unknown': null,
     'scss/dimension-no-non-numeric-values': true,
     'scss/dollar-variable-colon-newline-after': 'always-multi-line',
     'scss/dollar-variable-colon-space-after': 'always-single-line',
