@@ -111,6 +111,7 @@ export default {
       }
     ],
     'scss/function-calculation-no-interpolation': null,
+    'scss/function-color-channel': true,
     'scss/function-color-relative': true,
     'scss/function-disallowed-list': null,
     'scss/function-no-unknown': null,
@@ -125,6 +126,7 @@ export default {
         severity: 'warning'
       }
     ],
+    'scss/no-duplicate-load-rules': true,
     'scss/no-unused-private-members': true,
     'scss/partial-no-import': true,
     'scss/percent-placeholder-pattern': identifierPattern('placeholder'),
