@@ -215,3 +215,12 @@ $dollar-variable-default: true;
     }
   }
 }
+
+// scss/function-color-channel
+.function-color-channel {
+  opacity: color.alpha(rgb(210, 225, 221, 0.4));
+}
+
+// scss/no-duplicate-load-rules
+@use "no-duplicate-load-rules";
+@use "no-duplicate-load-rules";
