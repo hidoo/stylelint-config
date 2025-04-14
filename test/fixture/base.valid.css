@@ -125,3 +125,32 @@
 div.plugin-selector-tag-no-without-class {
   /* no settings */
 }
+
+@counter-style at-rule-descriptor-no-unknown {
+  system: cyclic;
+}
+
+@counter-style at-rule-descriptor-value-no-unknown {
+  system: cyclic;
+}
+
+/* at-rule-no-deprecated */
+@layer {
+  /* no settings */
+}
+
+@property --at-rule-prelude-no-invalid {
+  /* no settings */
+}
+
+.color-function-alias-notation {
+  color: rgb(0, 0, 0, 0.1);
+}
+
+.declaration-property-value-keyword-no-deprecated {
+  overflow: auto;
+}
+
+@property --syntax-string-no-invalid {
+  syntax: "<color>";
+}

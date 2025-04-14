@@ -120,3 +120,32 @@ p {
 div .plugin-selector-tag-no-without-class {
   /* no settings */
 }
+
+@counter-style at-rule-descriptor-no-unknown {
+  unkown: cyclic;
+}
+
+@counter-style at-rule-descriptor-value-no-unknown {
+  system: unkown;
+}
+
+/* at-rule-no-deprecated */
+@viewport {
+  /* no settings */
+}
+
+@property at-rule-prelude-no-invalid {
+  /* no settings */
+}
+
+.color-function-alias-notation {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.declaration-property-value-keyword-no-deprecated {
+  overflow: overlay;
+}
+
+@property --syntax-string-no-invalid {
+  syntax: "<unkown>";
+}
