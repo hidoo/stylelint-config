@@ -1,3 +1,42 @@
+# [1.1.0](https://github.com/hidoo/stylelint-config/compare/v1.0.0...v1.1.0) (2025-04-15)
+
+
+### Bug Fixes
+
+* **base:** set some rules that removed from stylelint-config-standard ([b6a525c](https://github.com/hidoo/stylelint-config/commit/b6a525cecb6b7d673175dd169ec065c9a74ad003))
+* **deps:** update dependency stylelint-config-clean-order to v6 ([f594472](https://github.com/hidoo/stylelint-config/commit/f594472f698041089d8fce2f5a3ca811d28aabf8))
+* **deps:** update dependency stylelint-config-clean-order to v6.1.0 ([065abb0](https://github.com/hidoo/stylelint-config/commit/065abb02c3e8ee72568127f87a2857340740615d))
+* **deps:** update dependency stylelint-config-clean-order to v7 ([053e161](https://github.com/hidoo/stylelint-config/commit/053e1616d606fd76f5ec43da19f40bc2d63100ea))
+* **deps:** update dependency stylelint-config-standard to v36.0.1 ([ded2985](https://github.com/hidoo/stylelint-config/commit/ded2985462b67c26b56bc5a0b224dfbe90a42937))
+* **deps:** update dependency stylelint-config-standard to v38 ([6c41dbb](https://github.com/hidoo/stylelint-config/commit/6c41dbb8628d58b1eeee8332fda1ddfa6e39c7ea))
+* **deps:** update dependency stylelint-config-standard-scss to v14 ([085b55c](https://github.com/hidoo/stylelint-config/commit/085b55c8ee1f4e21a9762f481318e766e8ec4537))
+* **deps:** update dependency stylelint-high-performance-animation to v1.11.0 ([#134](https://github.com/hidoo/stylelint-config/issues/134)) ([8993be4](https://github.com/hidoo/stylelint-config/commit/8993be418585399a563c1d6d20dfa21d553b6b09))
+* **deps:** update dependency stylelint-no-unsupported-browser-features to v8.0.2 ([#103](https://github.com/hidoo/stylelint-config/issues/103)) ([a6b7c1d](https://github.com/hidoo/stylelint-config/commit/a6b7c1d4b0d88d35b54f8e08d4205d89cbfc1fb0))
+* **deps:** update dependency stylelint-no-unsupported-browser-features to v8.0.4 ([#128](https://github.com/hidoo/stylelint-config/issues/128)) ([87717c1](https://github.com/hidoo/stylelint-config/commit/87717c152272ce6009f0385fb9d5f2c51db4a400))
+* **deps:** update dependency stylelint-scss to v6.10.0 ([#106](https://github.com/hidoo/stylelint-config/issues/106)) ([fea18d4](https://github.com/hidoo/stylelint-config/commit/fea18d41939d249d78a925dce706613ac23da7f9))
+* **deps:** update dependency stylelint-scss to v6.10.1 ([#124](https://github.com/hidoo/stylelint-config/issues/124)) ([e261230](https://github.com/hidoo/stylelint-config/commit/e2612306e366cd2c170c609e05fd4467333a7feb))
+* **deps:** update dependency stylelint-scss to v6.11.1 ([#142](https://github.com/hidoo/stylelint-config/issues/142)) ([9c7a62d](https://github.com/hidoo/stylelint-config/commit/9c7a62d0951040e0c6a17d22a7a0b3da468a03ae))
+* **deps:** update dependency stylelint-scss to v6.3.0 ([49771a6](https://github.com/hidoo/stylelint-config/commit/49771a69dcfd6c2d46bb45becad653a4f492d20f))
+* **deps:** update dependency stylelint-scss to v6.3.1 ([71b1b84](https://github.com/hidoo/stylelint-config/commit/71b1b8421655229e1aff168a21d67104470cb1fe))
+* **deps:** update dependency stylelint-scss to v6.3.2 ([d15741e](https://github.com/hidoo/stylelint-config/commit/d15741e94b995594c54a25b8b57fc96f7ec0b27c))
+* **deps:** update dependency stylelint-scss to v6.5.0 ([19690ec](https://github.com/hidoo/stylelint-config/commit/19690ece197b7e4293a5caa2a450a6dd7b7abb22))
+* **deps:** update dependency stylelint-scss to v6.5.1 ([03577e5](https://github.com/hidoo/stylelint-config/commit/03577e56f9ca6ff58c45162d4c64b93508937d8c))
+* **deps:** update dependency stylelint-scss to v6.6.0 ([10216b3](https://github.com/hidoo/stylelint-config/commit/10216b33c6448cd9fff076f58ad8e3d5dfb22bec))
+* **deps:** update dependency stylelint-scss to v6.7.0 ([371d2fc](https://github.com/hidoo/stylelint-config/commit/371d2fc2b4a99dab0f5428c75b475db6547b1708))
+* **deps:** update dependency stylelint-scss to v6.8.1 ([b20e892](https://github.com/hidoo/stylelint-config/commit/b20e892ff0df3ee75638d19ad351a93c3e132d9b))
+* **deps:** update stylelint-scss packages ([d96fd04](https://github.com/hidoo/stylelint-config/commit/d96fd04c6fea026db3aa81b91716d7bced56e112))
+* **scss:** configure scss/at-mixin-no-risky-nesting-selector rule ([f767e05](https://github.com/hidoo/stylelint-config/commit/f767e0510cb41935d11ee9b7053ff9d64e0468b4))
+* **scss:** configure scss/declaration-property-value-no-unknown rule ([829efec](https://github.com/hidoo/stylelint-config/commit/829efeca128193d6118a153c67b28a0d61cd11b1))
+
+
+### Features
+
+* **base:** update rules ([d4de56c](https://github.com/hidoo/stylelint-config/commit/d4de56c6d5cd1a2c6062225804740f8d2ebe699f))
+* confgure no-unknown-custom-media rule ([ba20787](https://github.com/hidoo/stylelint-config/commit/ba207872b008ab300dd1edeb51947773ac87db5e))
+* **scss:** update rules ([a96c4cf](https://github.com/hidoo/stylelint-config/commit/a96c4cf848193c3ba9d5b131b3d1ca01363e2831))
+
+
+
 # [1.0.0](https://github.com/hidoo/stylelint-config/compare/v1.0.0-alpha.1...v1.0.0) (2024-04-12)
 
 
