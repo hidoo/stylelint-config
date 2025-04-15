@@ -143,9 +143,11 @@ div.plugin-selector-tag-no-without-class {
   /* no settings */
 }
 
+/* configure by stylelint-config-standard
 .color-function-alias-notation {
   color: rgb(0, 0, 0, 0.1);
 }
+*/
 
 .declaration-property-value-keyword-no-deprecated {
   overflow: auto;
@@ -153,4 +155,16 @@ div.plugin-selector-tag-no-without-class {
 
 @property --syntax-string-no-invalid {
   syntax: "<color>";
+}
+
+.color-no-invalid-hex {
+  color: #999;
+}
+
+.function-linear-gradient-no-nonstandard-direction {
+  background: linear-gradient(to top, #fff, #000);
+}
+
+.unit-no-unknown {
+  width: 100px;
 }
