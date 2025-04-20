@@ -55,8 +55,8 @@ importers:
         specifier: 19.8.0
         version: 19.8.0
       '@hidoo/eslint-config':
-        specifier: 2.0.0-beta.0
-        version: 2.0.0-beta.0(@babel/core@7.26.10)(eslint@9.25.0(jiti@2.4.2))(typescript@5.8.2)
+        specifier: 2.0.0
+        version: 2.0.0(@babel/core@7.26.10)(eslint@9.25.0(jiti@2.4.2))(typescript@5.8.2)
       conventional-changelog-cli:
         specifier: 5.0.0
         version: 5.0.0(conventional-commits-filter@5.0.0)
@@ -314,8 +314,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hidoo/eslint-config@2.0.0-beta.0':
-    resolution: {integrity: sha512-LS6l39Y7vnacn0FEre3fz2v74b/xtJMEXO6ypHZWd5IENF0CHHOay90/EBTfTuM0WSvqATXfdYGQ/TeSlMGlgw==}
+  '@hidoo/eslint-config@2.0.0':
+    resolution: {integrity: sha512-UnQX63o20Fqh9JJ1DXW4my/RYmr1ovLa3DdrChchWCoKq0/GtCt9AMQgF6xcELCAi+t/7bP1OSkWGWULS1bxAQ==}
     engines: {node: '>=18.0.0', pnpm: 10.8.0}
     peerDependencies:
       '@babel/core': '>=7.2.0'
@@ -2858,7 +2858,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@hidoo/eslint-config@2.0.0-beta.0(@babel/core@7.26.10)(eslint@9.25.0(jiti@2.4.2))(typescript@5.8.2)':
+  '@hidoo/eslint-config@2.0.0(@babel/core@7.26.10)(eslint@9.25.0(jiti@2.4.2))(typescript@5.8.2)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/eslint-parser': 7.27.0(@babel/core@7.26.10)(eslint@9.25.0(jiti@2.4.2))
