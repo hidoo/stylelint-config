@@ -73,7 +73,7 @@
     "mocha": "11.2.2",
     "prettier": "3.5.3",
     "pnpm": "10.8.1",
-    "stylelint": "16.18.0",
+    "stylelint": "16.19.1",
     "stylelint-find-new-rules": "5.0.0"
   },
   "peerDependencies": {
