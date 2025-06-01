@@ -68,7 +68,7 @@
     "@hidoo/eslint-config": "2.0.0",
     "conventional-changelog-cli": "5.0.0",
     "cross-env": "7.0.3",
-    "eslint": "9.27.0",
+    "eslint": "9.28.0",
     "lint-staged": "15.5.1",
     "mocha": "11.5.0",
     "prettier": "3.5.3",
