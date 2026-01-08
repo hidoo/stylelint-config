@@ -82,8 +82,8 @@ importers:
         specifier: 16.26.1
         version: 16.26.1(typescript@5.9.3)
       stylelint-find-new-rules:
-        specifier: 5.0.0
-        version: 5.0.0(stylelint@16.26.1(typescript@5.9.3))
+        specifier: 5.0.1
+        version: 5.0.1(stylelint@16.26.1(typescript@5.9.3))
 
 packages:
 
@@ -2308,8 +2308,8 @@ packages:
     peerDependencies:
       stylelint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  stylelint-find-new-rules@5.0.0:
-    resolution: {integrity: sha512-IChLyAbppRgRf0fCdEtJGl2c4wGBoj9nZiFv5vLFPiA6n9FSX1Ajjrg7zqdcF80vQpIyjcoDCrMSoo7Tod+88A==}
+  stylelint-find-new-rules@5.0.1:
+    resolution: {integrity: sha512-Kmgba8Qu7+V/HNYIi/ci3uQrDoyPsEcnVyWq0KLxqiBHrBfEx688Uc2fUEFSwG9IsPCyH4xbuIGXKS0+N6lKjQ==}
     engines: {node: '>=18.12.0'}
     hasBin: true
     peerDependencies:
@@ -5031,7 +5031,7 @@ snapshots:
     dependencies:
       stylelint: 16.26.1(typescript@5.9.3)
 
-  stylelint-find-new-rules@5.0.0(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-find-new-rules@5.0.1(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
       columnify: 1.6.0
       picocolors: 1.1.1
