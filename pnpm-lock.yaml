@@ -45,8 +45,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(stylelint@16.26.1(typescript@5.9.3))
       stylelint-value-no-unknown-custom-properties:
-        specifier: 6.0.1
-        version: 6.0.1(stylelint@16.26.1(typescript@5.9.3))
+        specifier: 6.1.1
+        version: 6.1.1(stylelint@16.26.1(typescript@5.9.3))
     devDependencies:
       '@commitlint/cli':
         specifier: 19.8.0
@@ -2350,8 +2350,8 @@ packages:
     peerDependencies:
       stylelint: '>= 9.x < 17'
 
-  stylelint-value-no-unknown-custom-properties@6.0.1:
-    resolution: {integrity: sha512-N60PTdaTknB35j6D4FhW0GL2LlBRV++bRpXMMldWMQZ240yFQaoltzlLY4lXXs7Z0J5mNUYZQ/gjyVtU2DhCMA==}
+  stylelint-value-no-unknown-custom-properties@6.1.1:
+    resolution: {integrity: sha512-eQ1zidKD5t9zMEaskjGUY4W47lH76qMlmsDSmCAPEwtaGzB4Ls7ORTfysC1D6hamp2zFC+vN1vpQ+GFz3Tw3lw==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: '>=16'
@@ -5081,7 +5081,7 @@ snapshots:
       postcss-selector-parser: 6.1.2
       stylelint: 16.26.1(typescript@5.9.3)
 
-  stylelint-value-no-unknown-custom-properties@6.0.1(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-value-no-unknown-custom-properties@6.1.1(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
       postcss-value-parser: 4.2.0
       resolve: 1.22.11
