@@ -73,8 +73,8 @@ importers:
         specifier: 11.7.5
         version: 11.7.5
       pnpm:
-        specifier: 10.28.2
-        version: 10.28.2
+        specifier: 10.29.2
+        version: 10.29.2
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -1273,6 +1273,7 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   global-directory@4.0.1:
@@ -1926,8 +1927,8 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  pnpm@10.28.2:
-    resolution: {integrity: sha512-QYcvA3rSL3NI47Heu69+hnz9RI8nJtnPdMCPGVB8MdLI56EVJbmD/rwt9kC1Q43uYCPrsfhO1DzC1lTSvDJiZA==}
+  pnpm@10.29.2:
+    resolution: {integrity: sha512-vvQ/p1nZH9LaSzGaWg0T73pFu5haPXNCBYRw+dIFGjuoZ05ilnJlRobvlEOtE6gtor657rPgIhyHuBVP/510uA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -4639,7 +4640,7 @@ snapshots:
 
   pidtree@0.6.0: {}
 
-  pnpm@10.28.2: {}
+  pnpm@10.29.2: {}
 
   possible-typed-array-names@1.1.0: {}
 
