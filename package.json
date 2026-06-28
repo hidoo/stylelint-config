@@ -70,7 +70,7 @@
     "cross-env": "7.0.3",
     "eslint": "9.39.4",
     "lint-staged": "15.5.1",
-    "mocha": "11.7.5",
+    "mocha": "11.7.6",
     "prettier": "3.8.1",
     "pnpm": "10.30.0",
     "stylelint": "16.26.1",
