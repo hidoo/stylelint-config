@@ -71,7 +71,7 @@
     "eslint": "9.39.5",
     "lint-staged": "15.5.1",
     "mocha": "11.7.6",
-    "prettier": "3.9.4",
+    "prettier": "3.9.5",
     "pnpm": "10.34.4",
     "stylelint": "16.26.1",
     "stylelint-find-new-rules": "5.0.1"
